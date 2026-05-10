@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    overflow: hidden; /* Verhindert Scrollen */
+}
+
+/* Video Hintergrund Styling */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#whaleVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dunkles Overlay für bessere Lesbarkeit der Schrift */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 40, 0.4); /* Bläulicher Schatten */
+}
+
+/* Layout Zentrierung */
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Die Info-Box (Ping-Card) */
+.ping-card {
+    background: rgba(255, 255, 255, 0.1); /* Glasmorphismus-Effekt */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.ping-card h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #a0e9ff;
+}
+
+.ping-data {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.divider {
+    margin: 0 15px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* Blinkender Punkt Animation */
+.status-indicator {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00ffcc;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 10px #00ffcc;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
