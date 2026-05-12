@@ -108,11 +108,11 @@ h1 {
 .dot {
     height: 10px;
     width: 10px;
-    background-color: #00ffcc;
+    background-color: #ff0d00;
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 0 10px #00ffcc;
-    animation: blink 2s infinite;
+    animation: none;
 }
 
 @keyframes blink {
